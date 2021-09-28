@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-09-22T23:27:12.203Z",
+    "end": "2021-09-22T23:27:14.437Z",
+    "duration": 2234,
+    "testsRegistered": 3,
+    "passPercent": 66.7,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "warning",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "8eae7f75-332d-470b-9918-b39344bb7597",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "4627cb64-0c24-4ac2-9dbc-51da5414c9c4",
+        "title": "Cadastrar informações sobre o pet",
+        "fullFile": "/Users/f.teixeira.marques/fernanda.teixeira/bootcamp/Projetos-API/Api_Test.js/specs/pets_test.js",
+        "file": "/specs/pets_test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Cadastrar um novo pet na loja",
+            "fullTitle": "Cadastrar informações sobre o pet Cadastrar um novo pet na loja",
+            "timedOut": false,
+            "duration": 618,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "this.timeout(request_timeout);\nrequest(URL)\n    .post(ENDPOINT)\n    .send(PET_CREATED)\n    .expect(\"Content-Type\", /json/)\n    .end(function (err, res) {\n        expect(res.status).to.be.eql(200);\n        joiAssert(res.body, schema_pets);\n        done(err);\n    });",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ebf1e297-a7b7-4fd6-b13c-5e80e6baab3f",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "ebf1e297-a7b7-4fd6-b13c-5e80e6baab3f"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 618,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "f949710b-9566-4598-9ad7-8dd2189444ab",
+        "title": "Buscar informações sobre o pet",
+        "fullFile": "/Users/f.teixeira.marques/fernanda.teixeira/bootcamp/Projetos-API/Api_Test.js/specs/pets_test.js",
+        "file": "/specs/pets_test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Realizar uma busca de pet por ID",
+            "fullTitle": "Buscar informações sobre o pet Realizar uma busca de pet por ID",
+            "timedOut": false,
+            "duration": 577,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "this.timeout(request_timeout);\nrequest(URL)\n.get(ENDPOINT_BY_ID)\n.expect(\"Content-Type\", /json/)\n.end(function(err, res) {\n    expect(res.status).to.be.eql(200);\n    joiAssert(res.body, schema_pets_id);\n    done(err);\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "90aff322-b541-4c04-846e-920a372585ff",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Realizar uma busca de pets por status",
+            "fullTitle": "Buscar informações sobre o pet Realizar uma busca de pets por status",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "this.timeout(request_timeout);\nrequest(URL)\n.get(ENDPOINT_BY_STATUS)\n.expect(\"Content-Type\", /json/)\n.end(function(err, res) {\n    expect(res.status).to.be.eql(200);\n    joiAssert(res.body, schema_pets_by_status,);\n    done(err);\n});",
+            "err": {
+              "message": "AssertionError: array: [287.category.name] \"name\" is required",
+              "estack": "AssertionError: array: [287.category.name] \"name\" is required\n    at Test.<anonymous> (specs/pets_test.js:71:13)\n    at Test.assert (node_modules/supertest/lib/test.js:181:6)\n    at localAssert (node_modules/supertest/lib/test.js:131:12)\n    at /Users/f.teixeira.marques/fernanda.teixeira/bootcamp/Projetos-API/Api_Test.js/node_modules/supertest/lib/test.js:128:5\n    at Test.Request.callback (node_modules/superagent/lib/node/index.js:716:12)\n    at /Users/f.teixeira.marques/fernanda.teixeira/bootcamp/Projetos-API/Api_Test.js/node_modules/superagent/lib/node/index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules/superagent/lib/node/parsers/json.js:19:7)\n    at IncomingMessage.emit (node:events:406:35)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"
+            },
+            "isRoot": false,
+            "uuid": "d4f62538-d57e-44b9-94b1-5b73441b081a",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "90aff322-b541-4c04-846e-920a372585ff"
+        ],
+        "failures": [
+          "d4f62538-d57e-44b9-94b1-5b73441b081a"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 577,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2021
+}
